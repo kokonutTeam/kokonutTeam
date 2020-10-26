@@ -3,7 +3,7 @@ setTimeout(function() {
 
     setTimeout(function() {
         $(".start_icon").css("transition", "2s");
-        $(".start_icon").css("left", "10%");
+        $(".start_icon").css("opacity", "1");
     }, 1000)
     setTimeout(function() {
             $(".ml4_contain").css("display", "none");

@@ -49,6 +49,7 @@ body {
     display: block;
     background-color: white;
     box-shadow: 25px 25px 25px rgba(68, 68, 68, 0.6);
+    background-size: cover;
     /*  background: linear-gradient(315deg, hsl(210, 100%, 15%), hsl(210, 100%, 15%), #668cff, rgba(20, 8, 5, 0.6), rgba(20, 8, 5, 0.9));*/
 }
 
@@ -490,10 +491,11 @@ div[class*="page_in_"] {
     font-family: 'Sansita Swashed', cursive;
     position: fixed;
     top: 40%;
-    left: -100%;
+    left: 10%;
     transform: translate(-50%, -50%);
     cursor: pointer;
     display: block;
+    transition: 1.25s;
 }
 
 .start_icon>span {

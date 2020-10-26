@@ -18,7 +18,6 @@ function book_3d() {
 function txt_ml3() {
     var textWrapper = document.querySelector('.ml3_1');
     textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
-    // Remember the txt_animate.js file
     anime.timeline({
             loop: false
         })
