@@ -1,0 +1,18 @@
+.make_into_page {
+    display: block;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-color: none;
+    transition: 3s;
+    z-index: 100;
+}
+
+.make_into_page>.empty {}
+
+[class*="page_in"] {
+    border: 2px solid hsl(0, 0%, 85%);
+    border-right: 2px solid hsl(0, 0%, 50%);
+}

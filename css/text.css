@@ -1,0 +1,121 @@
+@import "compass";
+figure {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+svg {
+    padding: 5vw;
+    width: 90vw;
+}
+
+svg>* {
+    fill: #1C1C1C;
+    stroke: #1C1C1C;
+    stroke-width: 0.85px;
+}
+
+
+/* hover tip */
+
+body:hover:after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 1vh;
+    color: #1C1C1C;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font: 700 9px/14px Tahoma, sans-serif;
+    @include animation(tip 2.5s forwards);
+}
+
+@include keyframes(tip) {
+    0%,
+    100% {
+        opacity: 0;
+    }
+    10%,
+    80% {
+        opacity: 1;
+    }
+}
+
+.ml9 {
+    position: relative;
+    font-weight: 200;
+    font-size: 4em;
+}
+
+.ml9 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml9 .letter {
+    transform-origin: 50% 100%;
+    display: inline-block;
+    line-height: 1em;
+}
+
+.ml10,
+.ml10_1 {
+    position: relative;
+}
+
+.ml10 .text-wrapper,
+.ml10_1 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.2em;
+    padding-right: 0.05em;
+    padding-bottom: 0.1em;
+    overflow: hidden;
+}
+
+.ml10 .letter,
+.ml10_1 .letter {
+    display: inline-block;
+    line-height: 1em;
+    transform-origin: 0 0;
+}
+
+.domino_txt_letter {
+    display: none !important;
+}
+
+.ml16 {
+    color: #402d2d;
+    padding: 0px 0;
+    overflow: hidden;
+}
+
+.ml16 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+.wish_1_sp {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500 !important;
+}
+
+.w_4 {}
+
+.ml10_1 .w_4 {
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: #99ccff;
+    color: white !important;
+    text-align: center;
+    font-size: 50px;
+    color: hsl(0, 100%, 60%) !important;
+}

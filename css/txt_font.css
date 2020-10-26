@@ -1,0 +1,26 @@
+.font_w_1 {
+    font-family: 'Sansita Swashed script=vietnamese rev=1';
+}
+
+.w_1 {
+    font-weight: 500;
+    font-style: italic;
+}
+
+.w_1>span {
+    /*
+    color: white;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: #0055ff;
+    */
+    color: black;
+}
+
+.w_2 {
+    font-family: "Lobster script=vietnamese rev=1";
+    font-weight: 500;
+}
+
+.w_3 {
+    font-family: 'Sansita Swashed', cursive;
+}

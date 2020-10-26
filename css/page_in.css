@@ -1,0 +1,56 @@
+.contain_content {
+    display: block;
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+    height: 80%;
+    padding-top: 20%;
+}
+
+.img_content_w {
+    display: block;
+    width: 100%;
+}
+
+.img_content_w>img {
+    display: block;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+}
+
+.page_w_1 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #4d88ff;
+    font-style: italic;
+    text-align: center;
+    font-family: 'Sansita Swashed', cursive;
+    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-color: blue;
+}
+
+.credit {
+    display: block;
+    width: 100%;
+    height: inherit;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.credit_contain {
+    font-size: 23px;
+    font-style: italic;
+    text-align: right;
+    line-height: 2;
+    color: #e6e6e6;
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+    font-weight: 700;
+    -webkit-text-stroke-width: 0.65px;
+    -webkit-text-stroke-color: black;
+    letter-spacing: 0.85px;
+    word-spacing: 3px;
+}
