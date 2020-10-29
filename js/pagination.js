@@ -1,5 +1,9 @@
 var counter = 50;
 var timeOut = 5000;
+var count_page2 = -1;
+var count_sub_page2 = -1;
+
+
 $("#start_the_card").click(function() {
     book_3d();
     $("#start_the_card").css("transition", "3s");
@@ -35,33 +39,87 @@ function txt_ml3() {
         });
 }
 
+function sub_page_1_animate() {
+    arr = $(".sub_page1_content").find("span")
+    var temp = arr[0]
+    setTimeout(function() {
+        $(".sub_page1_content").find(temp).css("max-width", "100%")
+        setTimeout(function() {
+            temp = arr[1]
+            $(".sub_page1_content").find(temp).css("max-width", "100%")
+            setTimeout(function() {
+                temp = arr[2]
+                $(".sub_page1_content").find(temp).css("max-width", "100%")
+                setTimeout(function() {
+                    temp = arr[3]
+                    $(".sub_page1_content").find(temp).css("max-width", "100%")
+                }, 2000)
+            }, 2000)
+        }, 2700)
+    }, 1000)
+}
+
+
+function sub_page_2_animate() {
+    arr = $(".sub_page2_content").find("span");
+    if (count_page2 <= 5) {
+        count_page2 = count_page2 + 1
+        var temp = arr[count_page2]
+        $(".sub_page2_content").find(temp).css("max-width", "100%")
+        setTimeout(function() {
+            sub_page_2_animate()
+        }, 1000)
+    } else {
+        sub_sub_page_2_animate()
+    }
+}
+
+
+
+function sub_sub_page_2_animate() {
+
+    arr_sub_2 = $(".sub_sub_page_2").find("span")
+    if (count_sub_page2 <= 6) {
+        count_sub_page2 = count_sub_page2 + 1
+        var temp = arr_sub_2[count_sub_page2]
+        $(".sub_sub_page_2").find(temp).css("max-width", "100%")
+        setTimeout(function() {
+            sub_sub_page_2_animate()
+        }, 2000)
+    }
+}
+
 function nextPage1() {
     $("#hard_page").css("transform", "rotate3d(0, 1, 0, 180deg)");
     setTimeout(ml16(), 2000);
     setTimeout(() => {
+        sub_page_1_animate();
         $(".outer").css("transition", "0s");
         $(".outer").css("background-image", " url('./img/b_0.jpg')");
         $(".outer").css("filter", "brightness(85%)");
     }, 900);
     setTimeout(function() {
         $(".header_1_outer").css("visibility", "hidden");
+
     }, 950)
-    setTimeout(nextPage2, timeOut - 1000);
+    setTimeout(nextPage2, timeOut + 8000);
 }
 
 function nextPage2() {
-    txt_ml3();
+    //txt_ml3();
     $("#page_1").css("z-index", "6");
     $("#page_1").css("transition", "3s");
     $("#page_1").css("transform", "rotate3d(0, 1,0, 170deg)");
     setTimeout(() => {
         $(".page_in").children().css("visibility", "hidden");
+        sub_page_2_animate();
     }, 900);
     ml10();
-    setTimeout(nextPage3, timeOut + 5000);
+    setTimeout(nextPage3, timeOut + 19000);
 }
 
 function nextPage3() {
+
     $("#page_2").css("z-index", "8");
     $("#page_2").css("transition", "3s");
     $("#page_2").css("transform", "rotate3d(0, 1, 0, 167.5deg)");
