@@ -326,7 +326,7 @@ div[class*="page_in_"] {
 
 .page_in_2 {
     z-index: 0;
-    background-image: url("../img/page.jpg");
+    background-image: url("../img/.jpg");
     top: 0;
     right: 0;
     width: 400px;

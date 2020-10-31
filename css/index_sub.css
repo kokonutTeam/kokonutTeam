@@ -1,7 +1,10 @@
 .sub_page1 {
-    background-image: url('../img/page_3.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.make_into_page>.sub_page1 {
+    background-image: url('../img/page_3.jpg');
 }
 
 .sub_page1_content {
@@ -58,9 +61,12 @@
 /* Page 2 _ content */
 
 .sub_page2 {
-    background-image: url('../img/page_5.jpg') !important;
     background-size: cover;
     background-repeat: no-repeat;
+}
+
+.make_into_page>.sub_page2 {
+    background-image: url('../img/page_5.jpg');
 }
 
 .sub_page2_content {
@@ -177,4 +183,128 @@
 .sub_page2_content>span:nth-child(6)>span:nth-child(7) {
     top: 240px;
     left: 0;
+}
+
+
+/* Page 3 */
+
+.sub_page3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.make_into_page>.sub_page3 {
+    background-image: url('../img/page_6.jpg');
+}
+
+.sub_page3_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lobster', cursive;
+    font-family: 'Pacifico', cursive;
+    color: hsl(0, 0%, 20%);
+}
+
+.sub_page3_content>span {
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    max-width: 0%;
+    transition: 5.5s;
+    overflow: hidden;
+    width: 100%;
+    white-space: nowrap;
+    height: 110%;
+    text-align: center;
+}
+
+.sub_page3_content>span:nth-child(1) {
+    top: 80px;
+}
+
+.sub_page3_content>span:nth-child(2) {
+    top: 150px;
+}
+
+.sub_page3_content>span:nth-child(3) {
+    top: 215px;
+}
+
+.sub_page3_content>span:nth-child(4) {
+    top: 280px;
+    letter-spacing: 2.75px;
+    font-size: 33px;
+    color: white;
+    font-style: italic;
+    -webkit-text-stroke-width: 2.5px;
+    -webkit-text-stroke-color: hsl(0, 0%, 20%);
+    text-align: left;
+    letter-spacing: 2.75px;
+}
+
+.sub_page3_content>span:nth-child(5) {
+    top: 330px;
+}
+
+
+/* Page 4 */
+
+.sub_page4 {
+    background-image: url('../img/page_4.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.make_into_page>.sub_page4 {
+    background-image: url('../img/page_4.jpg');
+}
+
+.sub_page4_content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Lobster', cursive;
+    font-family: 'Pacifico', cursive;
+    color: hsl(0, 0%, 20%);
+}
+
+.sub_page4_content>span {
+    position: absolute;
+    font-size: 25px;
+    width: 100%;
+    white-space: nowrap;
+    left: 140px;
+    font-style: italic;
+    max-width: 0%;
+    overflow: hidden;
+    transition: 3.5s;
+}
+
+.sub_page4_content>span:nth-child(1) {
+    top: 80px;
+}
+
+.sub_page4_content>span:nth-child(2) {
+    top: 120px;
+}
+
+.sub_page4_content>span:nth-child(3) {
+    top: 200px;
+}
+
+.sub_page4_content>span:nth-child(4) {
+    top: 250px;
+}
+
+.sub_page4_content>span:nth-child(5) {
+    top: 320px;
+}
+
+.sub_page4_content>span:nth-child(6) {
+    top: 370px;
 }

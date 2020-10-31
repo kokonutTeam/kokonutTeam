@@ -2,8 +2,23 @@ var counter = 50;
 var timeOut = 5000;
 var count_page2 = -1;
 var count_sub_page2 = -1;
+var count_page3 = -1;
+var count_page4 = -1;
+var count_page1 = -1;
 
-
+function sub_page_4_animate() {
+    arr = $(".sub_page4_content").find("span");
+    if (count_page4 <= 5) {
+        count_page4 = count_page4 + 1
+        var temp = arr[count_page4]
+        $(".sub_page4_content").find(temp).css("max-width", "100%")
+        setTimeout(function() {
+            sub_page_4_animate()
+        }, 1500)
+    } else {
+        //sub_sub_page_2_animate()
+    }
+}
 $("#start_the_card").click(function() {
     book_3d();
     $("#start_the_card").css("transition", "3s");
@@ -17,6 +32,29 @@ function book_3d() {
     $(".D3_contain").css("transform", "rotate3d(1, 1, 0.5, -45deg)");
     $(".scale_trans").css("transform", "scale(0.8)");
     setTimeout(nextPage1, 3000)
+}
+
+function sub_page_3_animate() {
+    arr = $(".sub_page3_content").find("span")
+    if (count_page3 == 1) {
+        count_page3 = count_page3 + 1
+        var temp = arr[count_page3]
+        $(".sub_page3_content").find(temp).css("max-width", "100%")
+        setTimeout(function() {
+            sub_page_3_animate();
+        }, 4000)
+    } else {
+        if (count_page3 <= 3) {
+            count_page3 = count_page3 + 1
+            var temp = arr[count_page3]
+            $(".sub_page3_content").find(temp).css("max-width", "100%")
+            setTimeout(function() {
+                sub_page_3_animate();
+            }, 1500)
+        } else {
+            //sub_sub_page_2_animate()
+        }
+    }
 }
 
 function txt_ml3() {
@@ -40,23 +78,15 @@ function txt_ml3() {
 }
 
 function sub_page_1_animate() {
-    arr = $(".sub_page1_content").find("span")
-    var temp = arr[0]
-    setTimeout(function() {
-        $(".sub_page1_content").find(temp).css("max-width", "100%")
+    count_page1++;
+    if (count_page1 <= 3) {
+        arr = $(".sub_page1_content").find("span")
+        var temp = arr[count_page1]
+        $(".sub_page1_content").find(temp).css("max-width", "100%");
         setTimeout(function() {
-            temp = arr[1]
-            $(".sub_page1_content").find(temp).css("max-width", "100%")
-            setTimeout(function() {
-                temp = arr[2]
-                $(".sub_page1_content").find(temp).css("max-width", "100%")
-                setTimeout(function() {
-                    temp = arr[3]
-                    $(".sub_page1_content").find(temp).css("max-width", "100%")
-                }, 2000)
-            }, 2000)
-        }, 2700)
-    }, 1000)
+            sub_page_1_animate()
+        }, 1800)
+    }
 }
 
 
@@ -93,14 +123,13 @@ function nextPage1() {
     $("#hard_page").css("transform", "rotate3d(0, 1, 0, 180deg)");
     setTimeout(ml16(), 2000);
     setTimeout(() => {
-        sub_page_1_animate();
+        sub_page_4_animate();
         $(".outer").css("transition", "0s");
         $(".outer").css("background-image", " url('./img/b_0.jpg')");
         $(".outer").css("filter", "brightness(85%)");
     }, 900);
     setTimeout(function() {
         $(".header_1_outer").css("visibility", "hidden");
-
     }, 950)
     setTimeout(nextPage2, timeOut + 8000);
 }
@@ -110,12 +139,17 @@ function nextPage2() {
     $("#page_1").css("z-index", "6");
     $("#page_1").css("transition", "3s");
     $("#page_1").css("transform", "rotate3d(0, 1,0, 170deg)");
+
+
     setTimeout(() => {
-        $(".page_in").children().css("visibility", "hidden");
-        sub_page_2_animate();
+        sub_page_1_animate();
+        arr = $(".sub_page4_content").find("span").css("transition", "0s");
+        $(".page_in_4 ").children().css("transition", "0s");
+        $(".page_in_4 ").children().css("visibility", "hidden");
+        $(".page_in_4").css("background-image", "url('../kokonutTeam/img/page.jpg')");
     }, 900);
     ml10();
-    setTimeout(nextPage3, timeOut + 19000);
+    setTimeout(nextPage3, timeOut + 7000);
 }
 
 function nextPage3() {
@@ -124,13 +158,19 @@ function nextPage3() {
     $("#page_2").css("transition", "3s");
     $("#page_2").css("transform", "rotate3d(0, 1, 0, 167.5deg)");
     setTimeout(() => {
-        $(".page_in_2").children().css("visibility", "hidden");
+        // $(".page_in_2").children().css("visibility", "hidden");
+
+        sub_page_2_animate();
+        arr = $(".sub_page1_content").find("span").css("transition", "0s");
+        $(".page_in ").children().css("transition", "0s");
+        $(".page_in ").children().css("visibility", "hidden");
+        $(".page_in").css("background-image", "url('../kokonutTeam/img/page.jpg')");
     }, 900);
     setTimeout(function() {
         $("#page_3").css("z-index", "9");
-    }, 1500)
+    }, 900)
     setTimeout(ml10_1(), 1500);
-    setTimeout(nextPage4, timeOut);
+    setTimeout(nextPage4, timeOut + 17000);
 
 }
 
@@ -142,9 +182,15 @@ function nextPage4() {
         $("#page_4").css("z-index", "10");
     }, 1500);
     setTimeout(() => {
-        $(".page_in_3").children().css("visibility", "hidden");
+        //  $(".page_in_3").children().css("visibility", "hidden");
+        arr = $(".sub_page2_content").find("span").css("transition", "0s");
+        $(".page_in_2 ").children().css("transition", "0s");
+        $(".page_in_2 ").children().css("visibility", "hidden");
+        $(".page_in_2").css("background-image", "url('../kokonutTeam/img/page.jpg')");
+
+        sub_page_3_animate();
     }, 900);
-    setTimeout(nextPage5, timeOut);
+    setTimeout(nextPage5, timeOut + 10000);
 }
 
 function nextPage5() {
@@ -155,9 +201,9 @@ function nextPage5() {
         $("#hard_page_back").css("z-index", "11");
     }, 500);
     setTimeout(() => {
-        $(".page_in_4").children().css("visibility", "hidden");
+        //   $(".page_in_4").children().css("visibility", "hidden");
     }, 900);
-    setTimeout(nextPage6, timeOut * 0.5);
+    setTimeout(nextPage6, timeOut);
 }
 
 function nextPage6() {
