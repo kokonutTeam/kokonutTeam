@@ -36,7 +36,7 @@ function book_3d() {
 
 function sub_page_3_animate() {
     arr = $(".sub_page3_content").find("span")
-    if (count_page3 == 1) {
+    if (count_page3 == 2) {
         count_page3 = count_page3 + 1
         var temp = arr[count_page3]
         $(".sub_page3_content").find(temp).css("max-width", "100%")
@@ -115,7 +115,7 @@ function sub_sub_page_2_animate() {
         $(".sub_sub_page_2").find(temp).css("max-width", "100%")
         setTimeout(function() {
             sub_sub_page_2_animate()
-        }, 2000)
+        }, 1500)
     }
 }
 
@@ -146,7 +146,7 @@ function nextPage2() {
         arr = $(".sub_page4_content").find("span").css("transition", "0s");
         $(".page_in_4 ").children().css("transition", "0s");
         $(".page_in_4 ").children().css("visibility", "hidden");
-        $(".page_in_4").css("background-image", "url('../kokonutTeam/img/page.jpg')");
+        $(".page_in_4").css("background-image", "url('../kokonutTeam/img/backPage_2.jpg')");
     }, 900);
     ml10();
     setTimeout(nextPage3, timeOut + 7000);
@@ -164,7 +164,7 @@ function nextPage3() {
         arr = $(".sub_page1_content").find("span").css("transition", "0s");
         $(".page_in ").children().css("transition", "0s");
         $(".page_in ").children().css("visibility", "hidden");
-        $(".page_in").css("background-image", "url('../kokonutTeam/img/page.jpg')");
+        $(".page_in").css("background-image", "url('../kokonutTeam/img/backPage_2.jpg')");
     }, 900);
     setTimeout(function() {
         $("#page_3").css("z-index", "9");
@@ -186,7 +186,7 @@ function nextPage4() {
         arr = $(".sub_page2_content").find("span").css("transition", "0s");
         $(".page_in_2 ").children().css("transition", "0s");
         $(".page_in_2 ").children().css("visibility", "hidden");
-        $(".page_in_2").css("background-image", "url('../kokonutTeam/img/page.jpg')");
+        $(".page_in_2").css("background-image", "url('../kokonutTeam/img/backPage_2.jpg')");
 
         sub_page_3_animate();
     }, 900);
@@ -201,7 +201,11 @@ function nextPage5() {
         $("#hard_page_back").css("z-index", "11");
     }, 500);
     setTimeout(() => {
-        //   $(".page_in_4").children().css("visibility", "hidden");
+        $(".page_in_3").children().css("visibility", "hidden");
+        arr = $(".sub_page3_content").find("span").css("transition", "0s");
+        $(".page_in_3 ").children().css("transition", "0s");
+        $(".page_in_3 ").children().css("visibility", "hidden");
+        $(".page_in_3").css("background-image", "url('../kokonutTeam/img/backPage_2.jpg')");
     }, 900);
     setTimeout(nextPage6, timeOut);
 }
@@ -213,25 +217,29 @@ function nextPage6() {
     setTimeout(() => {
         $(".page_in_5").children().css("visibility", "hidden");
     }, 900);
+    setTimeout(theEnd, 3000);
+}
+
+function theEnd() {
+    $("#main_card").css("transition", "2.5s")
+    $("#main_card").css("opacity", "0")
     setTimeout(function() {
-        $("#main_card").css("transition", "2.5s")
-        $("#main_card").css("opacity", "0")
-        setTimeout(function() {
-            $("#main_card").css("display", "none")
-        }, 3500)
-        setTimeout(function() {
-            $(".happy_bg").css("width", "100vw");
-            setTimeout(function() {
-                document.getElementsByTagName("BODY")[0].innerHTML = "";
-                heart_bg_maker();
-                setTimeout(function() {
-                    $(".balloon_flow").css("opacity", "1");
-                    $(".balloon_flow").css("bottom", "50%");
-                    $(".balloon_flow").css("transform", "translate(-50%,50%)");
-                    $(".balloon_wish").css("opacity", "1");
-                }, 3000)
-            }, 3000)
-        }, 2500)
+        $("#main_card").css("display", "none")
+    }, 3500)
+    setTimeout(function() {
+        $(".happy_bg").css("width", "100vw");
+        setTimeout(balloon_up, 3000);
+    }, 2500)
+}
+
+function balloon_up() {
+    document.getElementsByTagName("BODY")[0].innerHTML = '';
+    heart_bg_maker();
+    setTimeout(function() {
+        $(".balloon_flow").css("opacity", "1");
+        $(".balloon_flow").css("bottom", "50%");
+        $(".balloon_flow").css("transform", "translate(-50%,50%)");
+        $(".balloon_wish").css("opacity", "1");
     }, 3000)
 }
 
@@ -292,6 +300,7 @@ function heart_bg_maker() {
 
     $("DIV").append("<span class='balloon_flow'><span class='balloon_wish'>Happy Teacher Day <span>20/11</span></span></span>");
     $("DIV").append("<span class='tutor'><span>Click</span><span>and</span><span>Hold</span></span>")
+    $("DIV").append(' <footer style="bottom: 20px; right: 0; display: flex; justify-content: flex-end;width: 100%; align-items: center;position: fixed;"><div style="text-align: right;line-height: 1.25; font-weight: bold;font-size: 18px"><span id="icon-name" style="display: block;">19050201</span><span style="display: block;">KOKONUT</span></div><img style="width: 120px;height: auto;" src="https://iconclub.github.io/assets/iconLogo.png" alt="ICON"></footer>')
     const duration = 3000;
     const speed = 1.5;
     const cursorXOffset = 0;

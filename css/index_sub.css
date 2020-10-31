@@ -95,14 +95,14 @@
 .sub_page2_content>span:nth-child(1) {
     font-size: 45px;
     top: 0px;
-    left: 200px;
+    left: 180px;
     letter-spacing: 6px;
 }
 
 .sub_page2_content>span:nth-child(2) {
     font-size: 35px;
     top: 60px;
-    left: 280px;
+    left: 255px;
     letter-spacing: 5px;
 }
 
