@@ -146,7 +146,7 @@ function nextPage2() {
         arr = $(".sub_page4_content").find("span").css("transition", "0s");
         $(".page_in_4 ").children().css("transition", "0s");
         $(".page_in_4 ").children().css("visibility", "hidden");
-        $(".page_in_4").css("background-image", "url('../img/backPage_2.jpg')");
+        $(".page_in_4").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/backPage_2.jpg')");
     }, 900);
     ml10();
     setTimeout(nextPage3, timeOut + 7000);
@@ -164,7 +164,7 @@ function nextPage3() {
         arr = $(".sub_page1_content").find("span").css("transition", "0s");
         $(".page_in ").children().css("transition", "0s");
         $(".page_in ").children().css("visibility", "hidden");
-        $(".page_in").css("background-image", "url('../img/backPage_2.jpg')");
+        $(".page_in").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/backPage_2.jpg')");
     }, 900);
     setTimeout(function() {
         $("#page_3").css("z-index", "9");
@@ -186,7 +186,7 @@ function nextPage4() {
         arr = $(".sub_page2_content").find("span").css("transition", "0s");
         $(".page_in_2 ").children().css("transition", "0s");
         $(".page_in_2 ").children().css("visibility", "hidden");
-        $(".page_in_2").css("background-image", "url('../img/backPage_2.jpg')");
+        $(".page_in_2").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/backPage_2.jpg')");
 
         sub_page_3_animate();
     }, 900);
@@ -205,7 +205,7 @@ function nextPage5() {
         arr = $(".sub_page3_content").find("span").css("transition", "0s");
         $(".page_in_3 ").children().css("transition", "0s");
         $(".page_in_3 ").children().css("visibility", "hidden");
-        $(".page_in_3").css("background-image", "url('../img/backPage_2.jpg')");
+        $(".page_in_3").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/backPage_2.jpg')");
     }, 900);
     setTimeout(nextPage6, timeOut);
 }
