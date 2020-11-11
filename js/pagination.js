@@ -92,15 +92,23 @@ function sub_page_1_animate() {
 
 function sub_page_2_animate() {
     arr = $(".sub_page2_content").find("span");
-    if (count_page2 <= 5) {
+    if (count_page2 < 4) {
         count_page2 = count_page2 + 1
         var temp = arr[count_page2]
         $(".sub_page2_content").find(temp).css("max-width", "100%")
         setTimeout(function() {
-            sub_page_2_animate()
+            sub_page_2_animate();
         }, 1000)
     } else {
-        sub_sub_page_2_animate()
+        if (count_page2 == 4) {
+            count_page2 = count_page2 + 1
+            var temp = arr[count_page2]
+            $(".sub_page2_content").find(temp).css("max-width", "100%")
+            setTimeout(function() {
+                sub_page_2_animate();
+            }, 1000)
+        }
+        sub_sub_page_2_animate();
     }
 }
 
@@ -146,6 +154,7 @@ function nextPage2() {
         arr = $(".sub_page4_content").find("span").css("transition", "0s");
         $(".page_in_4 ").children().css("transition", "0s");
         $(".page_in_4 ").children().css("visibility", "hidden");
+        $(".page_in_4 ").css("transition", "0s");
         $(".page_in_4").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/backPage_2.jpg')");
     }, 900);
     ml10();
@@ -299,7 +308,6 @@ function heart_bg_maker() {
 
 
     $("DIV").append("<span class='balloon_flow'><span class='balloon_wish'>Happy Teacher Day <span>20/11</span></span></span>");
-    $("DIV").append("<span class='tutor'><span>Click</span><span>and</span><span>Hold</span></span>")
     $("DIV").append(' <footer style="bottom: 20px; right: 0; display: flex; justify-content: flex-end;width: 100%; align-items: center;position: fixed;"><div style="text-align: right;line-height: 1.25; font-weight: bold;font-size: 18px"><span id="icon-name" style="display: block;">19050201</span><span style="display: block;">KOKONUT</span></div><img style="width: 120px;height: auto;" src="https://iconclub.github.io/assets/iconLogo.png" alt="ICON"></footer>')
     const duration = 3000;
     const speed = 1.5;

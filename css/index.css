@@ -527,7 +527,7 @@ div[class*="page_in_"] {
 
 .balloon_flow {
     position: fixed;
-    bottom: -100%;
+    bottom: -200%;
     left: 50%;
     transform: translate(-50%, 0);
     width: 800px;

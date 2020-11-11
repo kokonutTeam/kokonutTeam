@@ -138,7 +138,7 @@
     -webkit-text-stroke-width: 1.25px;
     -webkit-text-stroke-color: #D1F7D1;
     color: #75BD89 !important;
-    transition: 1.5s;
+    transition: 3.5s;
 }
 
 .sub_page2_content>span:nth-child(6)>span {
@@ -282,7 +282,7 @@
     font-style: italic;
     max-width: 0%;
     overflow: hidden;
-    transition: 3.5s;
+    transition: 2.5s;
 }
 
 .sub_page4_content>span:nth-child(1) {
@@ -307,4 +307,8 @@
 
 .sub_page4_content>span:nth-child(6) {
     top: 370px;
+}
+
+.hard_page_back {
+    position: absolute;
 }
