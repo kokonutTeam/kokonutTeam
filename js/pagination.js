@@ -133,7 +133,7 @@ function nextPage1() {
     setTimeout(() => {
         sub_page_4_animate();
         $(".outer").css("transition", "0s");
-        $(".outer").css("background-image", " url('./img/b_0.jpg')");
+        $(".outer").css("background-image", " url('./img/back_1.jpg')");
         $(".outer").css("filter", "brightness(85%)");
     }, 900);
     setTimeout(function() {

@@ -5,8 +5,14 @@
 
 body {
     overflow: hidden;
+    /*
     background-color: #99d4e6;
+   
     background-image: linear-gradient(to bottom right, #d6eef5, #adddeb, #46b2d2, #2887a4);
+    background-image: linear-gradient(to bottom right, #abe2fa, #afc6f2, #82baf3, #24b3f1);
+    */
+    background-image: none;
+    background-image: url("../img/background_3.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;

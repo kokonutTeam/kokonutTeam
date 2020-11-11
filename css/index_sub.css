@@ -312,3 +312,11 @@
 .hard_page_back {
     position: absolute;
 }
+
+.outer_body_ {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    opacity: 0.15;
+}
