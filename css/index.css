@@ -223,7 +223,7 @@ div[class*="page_in_"] {
 }
 
 .header_1_outer>span {
-    font-size: 40px;
+    font-size: 26.5px;
     display: block;
     width: 100%;
     margin: 10px auto;
@@ -233,6 +233,7 @@ div[class*="page_in_"] {
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: #0055ff;
     text-shadow: 12px 8px rgba(109, 107, 214, 0.25);
+    font-family: tp2;
 }
 
 .ml4_contain {
