@@ -73,6 +73,11 @@ div[class*="page_in_"] {
     overflow: hidden;
 }
 
+div[class*="sub_page "] {
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .page_in {
     position: absolute;
     top: 0;
