@@ -230,8 +230,8 @@ div[class*="page_in_"] {
     color: white;
     font-weight: 700;
     font-style: italic;
-    -webkit-text-stroke-width: 1.5px;
-    -webkit-text-stroke-color: #0055ff;
+    -webkit-text-stroke-width: 1.0px;
+    -webkit-text-stroke-color: hsl(220, 100%, 30%);
     text-shadow: 12px 8px rgba(109, 107, 214, 0.25);
     font-family: tp2;
 }
