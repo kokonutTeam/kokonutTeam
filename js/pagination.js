@@ -11,11 +11,13 @@ try {
     var bg3 = new Image();
     var bg4 = new Image();
     var bg5 = new Image();
+    var bg6 = new Image();
     bg1.src = "./img/back_1.jpg";
     bg2.src = "./img/back_P_4.jpg";
     bg3.src = "./img/back_P_5_1.jpg";
     bg4.src = "./img/back_P_2.jpg";
     bg5.src = "./img/back_P_1.jpg";
+    bg6.src = "./img/white_page.jpg";
 } catch (err) {
     console.log("Error in load IMG");
     console.log(err.message);
@@ -229,10 +231,10 @@ function nextPage5() {
         arr = $(".sub_page3_content").find("span").css("transition", "0s");
         $(".page_in_3 ").children().css("transition", "0s");
         $(".page_in_3 ").children().css("visibility", "hidden");
-        $(".page_in_3").css("background-image", "url('./img/back_P_1.jpg')");
+        $(".page_in_3").css("background-image", "url('./img/white_page.jpg')");
         //$(".page_in_3").css("background-image", "url('None')");
     }, 900);
-    setTimeout(nextPage6, timeOut);
+    setTimeout(nextPage6, timeOut - 1000);
 }
 
 function nextPage6() {
