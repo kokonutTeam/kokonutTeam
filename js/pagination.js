@@ -5,6 +5,17 @@ var count_sub_page2 = -1;
 var count_page3 = -1;
 var count_page4 = -1;
 var count_page1 = -1;
+try {
+    bg = new Image();
+    bg.src = "./img/back_1.jpg";
+    bg.src = "./img/back_P_4.jpg";
+    bg.src = "./img/back_P_5_1.jpg";
+    bg.src = "./img/back_P_2.jpg";
+    bg.src = "./img/back_P_1.jpg";
+} catch (err) {
+    console.log("Error in load IMG");
+    console.log(err.message);
+}
 
 function sub_page_4_animate() {
     arr = $(".sub_page4_content").find("span");
