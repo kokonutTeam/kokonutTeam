@@ -6,12 +6,16 @@ var count_page3 = -1;
 var count_page4 = -1;
 var count_page1 = -1;
 try {
-    bg = new Image();
-    bg.src = "./img/back_1.jpg";
-    bg.src = "./img/back_P_4.jpg";
-    bg.src = "./img/back_P_5_1.jpg";
-    bg.src = "./img/back_P_2.jpg";
-    bg.src = "./img/back_P_1.jpg";
+    var bg1 = new Image();
+    var bg2 = new Image();
+    var bg3 = new Image();
+    var bg4 = new Image();
+    var bg5 = new Image();
+    bg1.src = "./img/back_1.jpg";
+    bg2.src = "./img/back_P_4.jpg";
+    bg3.src = "./img/back_P_5_1.jpg";
+    bg4.src = "./img/back_P_2.jpg";
+    bg5.src = "./img/back_P_1.jpg";
 } catch (err) {
     console.log("Error in load IMG");
     console.log(err.message);
