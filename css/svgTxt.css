@@ -21,6 +21,7 @@ svg.intro {
 .text-stroke {
     fill: none;
     stroke: #b3c6ff;
+    stroke: hsl(0, 0%, 30%);
     stroke-width: 2.8px;
     stroke-dashoffset: -900;
     stroke-dasharray: 900;
@@ -38,9 +39,12 @@ svg.intro {
 }
 
 .text-stroke-2 {
-    stroke: white;
+    /*stroke: hsl(210, 100%, 45%);*/
+    stroke: #fff;
+    -webkit-text-stroke-width: 5.0px;
+    -webkit-text-stroke-color: black;
     animation-delay: 1.2s;
-    text-shadow: 0 0 80px #fff, 0 0 20px #fff, 0 0 30px #0052cc, 0 0 40px #0052cc, 0 0 50px #0052cc, 0 0 60px #0052cc, 0 0 70px #0052cc;
+    text-shadow: 0 0 20px #fff, 0 0 30px #3385ff, 0 0 40px #3385ff, 0 0 50px #3385ff, 0 0 60px #3385ff, 0 0 70px #3385ff, 0 0 80px #3385ff;
 }
 
 .text-stroke:nth-child(5) {
