@@ -214,7 +214,7 @@ function nextPage5() {
         arr = $(".sub_page3_content").find("span").css("transition", "0s");
         $(".page_in_3 ").children().css("transition", "0s");
         $(".page_in_3 ").children().css("visibility", "hidden");
-        $(".page_in_3").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/back_P_3.jpg')");
+        $(".page_in_3").css("background-image", "url('https://raw.githubusercontent.com/kokonutTeam/kokonutTeam.github.io/master/img/back_P_1.jpg')");
     }, 900);
     setTimeout(nextPage6, timeOut);
 }
